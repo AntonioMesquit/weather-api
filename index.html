@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="animation.css">
+    
+</head>
+<body>
+    <header>
+        <p>Meu API de clima</p>
+    </header>
+  
+  <form>
+    <input type="text" placeholder="Pais ou estado" id="input-text">
+    <button type="submit" class="input-buton">-></button>
+  </form>
+  <div class="card">
+    <div id="loader"></div>
+    <div class="alin">
+    <img src="http://openweathermap.org/img/wn/.png" alt="" class="icon">
+    <div class="ok">
+    <div class="txt">
+     <p class="local"></p>
+     <img src="https://flagsapi.com//flat/64.png" class="bandeira">
+    </div>
+    <div class="sl">
+    <p class="erro1"></p>
+    <p class="erro2"></p>
+  </div>
+    <div class="a">
+     <p class="temp"></p>
+     <p class="desc"></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+</body>
+</html>

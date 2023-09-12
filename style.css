@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;800&display=swap');
+:root{
+
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+
+}
+body{
+    background-color: rgba(202, 193, 193, 0.648);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    color: white;
+    letter-spacing: .4rem;
+    font-weight: 400;
+    
+}
+form{
+   position: relative;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   margin-bottom: 5rem;
+}
+#input-text{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    font-size: 3rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.39) ;
+}
+#input-text::placeholder{
+    font-size: 1.5rem;
+}
+.input-buton{
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    padding: 5rem;
+    border-radius: 2rem;
+    min-width: 40rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding-block: 2rem;
+    background-color: #C0B3BC;
+    font-size: 3rem;
+}
+.bandeira.hiden , .icons.hiden {
+    display: none;
+}
+p{
+    font-size: 2.5rem;
+}
+.txt{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.icon{
+    width: 10rem;
+    height: 10rem;
+}
+.ok{
+    display: flex;
+    flex-direction: column;
+}
+.alin{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.icon,.bandeira{
+    display: none;
+}
+.card.active .icon{
+    display: block;
+}
+.card.active .bandeira{
+    display: block;
+}
+.a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
