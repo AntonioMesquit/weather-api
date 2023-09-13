@@ -8,6 +8,8 @@ export class API {
         this.erro1 = document.querySelector(".erro1")
         this.erro2 = document.querySelector(".erro2")
         this.mostrar = this.mostrar.bind(this);
+        this.header = document.querySelector("header")
+        this.most = document.querySelector(".txt")
     }
 
     async chamarAPI(text) {
@@ -27,12 +29,13 @@ export class API {
                 
                 let grau = Math.floor(temp);
                 this.card.classList.add("active");
-                this.card.classList.remove("hiden")
+                this.most.classList.remove("active")
                 this.icons.classList.remove("hiden")
                 document.querySelector(".local").innerHTML = nameCountry;
                 document.querySelector(".temp").innerHTML = `${grau}°`;
                 document.querySelector(".icon").innerHTML = icon;
                 document.querySelector(".desc").innerHTML = descrip;
+                this.header.classList.remove("erro")
                 this.icons.setAttribute("src", `http://openweathermap.org/img/wn/${icon}.png`);
                 this.bandeira.setAttribute("src", `https://flagsapi.com/${country}/flat/64.png`);
                 this.erro1.innerHTML =""
@@ -44,11 +47,15 @@ export class API {
                 document.querySelector(".temp").innerHTML = "";
                 document.querySelector(".icon").innerHTML = "";
                 document.querySelector(".desc").innerHTML = "";
-                
                 this.erro1.innerHTML = "404"
                 this.erro2.innerHTML = "Acho que voce digitou errado, tente novamente"
-                this.card.classList.add("hiden")
-                this.icons.classList.add("hiden")
+                this.icons.removeAttribute("src");
+                this.bandeira.removeAttribute("src");
+                this.header.classList.add("erro")
+                this.icons.innerHTML = "";
+                this.most.classList.add("active")
+               
+              
                 
             }
         } catch (error) {

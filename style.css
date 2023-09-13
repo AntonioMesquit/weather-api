@@ -5,6 +5,7 @@
 }
 *{
     padding: 0;
+    transition: 1s;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
@@ -21,7 +22,7 @@ body{
 header{
     color: white;
     letter-spacing: .4rem;
-    font-weight: 400;
+    font-weight: 700;
     
 }
 form{
@@ -56,7 +57,7 @@ form{
     background-color: rgb(255, 255, 255);
     padding: 5rem;
     border-radius: 2rem;
-    min-width: 40rem;
+    max-width: 50rem;
 }
 header{
     position: fixed;
@@ -85,10 +86,13 @@ p{
 .ok{
     display: flex;
     flex-direction: column;
+
+    width: 100%;
 }
 .alin{
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 2rem;
     
 }
@@ -101,9 +105,55 @@ p{
 .card.active .bandeira{
     display: block;
 }
+.icon.hiden{
+    display: none;
+}
 .a{
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    gap: 12rem;
+   
+
+}
+.sl{
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+   
+}
+header.erro{
+    background-color: red;
+}
+.erro1{
+width: 40%;
+}
+.erro2{
+    width: 40%;
+}
+.erro1{
+    font-size: 10rem;
+    
+}
+.txt.active{
+    display: none;
+}
+@media screen and (max-width:430px){
+    .card{
+        width: 100%;
+      
+    }
+    form{
+        flex-direction: column;
+        margin-bottom: 0rem;
+    }
+    .erro1{
+        font-size: 5rem;
+    }
+    .erro2{
+        font-size: 2rem;
+    }
 }
